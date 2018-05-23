@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Smart Terminal Web Application</title>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type=”image/x-ico”>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-ico">
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+
+<body class="login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="{% static 'img/logo.jpg' %}">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h3 class="card-title">Login</h3>
+							<form method="POST">
+								<div class="form-group-lg" id="patientIDDiv">
+									<div class="form-group">
+										<label for="patientID">Patient ID</label>
+										<input id="patientID" type="text" class="form-control" name="patientID" value="" required autofocus>
+									</div>
+                                    {% if message %}
+                                        <div class="text-center text-danger">
+                                            <span class="alert alert-danger">{{ message }}</span>
+                                        </div>
+                                    {% endif %}
+								</div>
+
+								<div class="form-group-lg" id="intervalDiv">
+									<div class="form-group">
+										<label for="interval">Interval Time</label>
+										<input id="interval" type="text" class="form-control" name="interval" placeholder="seconds" required
+                                            onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+									</div>
+								</div>
+
+								<div class="form-group no-margin">
+									<button type="submit" class="btn btn-primary btn-block">Login</button>
+								</div>
+                                {% csrf_token %}
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; 2018 &mdash; Team One
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

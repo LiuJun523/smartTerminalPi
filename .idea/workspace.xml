@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e6f8c17-0706-4daa-9e77-594598244acc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/smartTerminalApp/static/js/cv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartTerminalApp/static/js/face-detection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartTerminalApp/static/js/signalling.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTerminalApp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smartTerminalApp/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTerminalApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,8 +46,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smartTerminalApp/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+            <state relative-caret-position="245">
+              <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -498,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartTerminalApp/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+        <state relative-caret-position="245">
+          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
         </state>
       </provider>
     </entry>

@@ -43,7 +43,7 @@ body.login-page {
 	border-width: 2.3px;
 }
 
-.login-page .form-group label {
+.login-page .form-group {
 	width: 100%;
 }
 
@@ -66,18 +66,18 @@ body.login-page {
 }
 
 @media screen and (max-width: 425px) {
-	.my-login-page .card-wrapper {
+	.login-page .card-wrapper {
 		width: 90%;
 		margin: 0 auto;
 	}
 }
 
 @media screen and (max-width: 320px) {
-	.my-login-page .card.fat {
+	.login-page .card.fat {
 		padding: 0;
 	}
 
-	.my-login-page .card.fat .card-body {
+	.login-page .card.fat .card-body {
 		padding: 15px;
 	}
 }

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e6f8c17-0706-4daa-9e77-594598244acc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smartTerminalApp/static/js/jsmpg.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTerminalApp/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTerminalApp/static/js/jsmpg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTerminalApp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smartTerminalApp/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smartTerminalApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/views.py" afterDir="false" />
     </list>
@@ -23,8 +24,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smartTerminalApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="500">
+              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -35,17 +36,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jsmpg.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/js/jsmpg.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-333">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="493">
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -53,8 +45,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartTerminalApp/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="378">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -62,8 +54,8 @@
       <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="106">
+              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -86,6 +78,8 @@
       <find>HTTP_PORT</find>
       <find>video.js</find>
       <find>print</find>
+      <find>StreamingHttpServer</find>
+      <find>StreamingHttpHandler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,12 +94,12 @@
         <option value="$PROJECT_DIR$/smartTerminalApp/forms.py" />
         <option value="$PROJECT_DIR$/smartTerminalApp/templates/base.html" />
         <option value="$PROJECT_DIR$/smartTerminal/urls.py" />
-        <option value="$PROJECT_DIR$/smartTerminalApp/static/css/login.css" />
-        <option value="$PROJECT_DIR$/smartTerminalApp/static/js/main.js" />
         <option value="$PROJECT_DIR$/smartTerminalApp/templates/index.html" />
         <option value="$PROJECT_DIR$/smartTerminalApp/static/js/jsmpg.js" />
         <option value="$PROJECT_DIR$/smartTerminalApp/static/js/video.js" />
         <option value="$PROJECT_DIR$/smartTerminalApp/templates/main.html" />
+        <option value="$PROJECT_DIR$/smartTerminalApp/static/css/login.css" />
+        <option value="$PROJECT_DIR$/smartTerminalApp/static/js/main.js" />
         <option value="$PROJECT_DIR$/smartTerminalApp/views.py" />
       </list>
     </option>
@@ -120,9 +114,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="179" />
     <option name="y" value="23" />
-    <option name="width" value="1261" />
+    <option name="width" value="1438" />
     <option name="height" value="791" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -156,6 +149,13 @@
               <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
               <item name="smartTerminalApp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+              <item name="smartTerminalApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
@@ -252,7 +252,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="179" y="23" width="1261" height="791" extended-state="0" />
+    <frame x="0" y="23" width="1438" height="791" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -262,7 +262,7 @@
       <window_info anchor="bottom" id="Python Console" order="3" />
       <window_info anchor="bottom" id="Run" order="8" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22839017" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20027816" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32914925" />
@@ -318,13 +318,6 @@
     <entry file="file://$PROJECT_DIR$/smartTerminalApp/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartTerminal/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -359,20 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartTerminalApp/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/js/jsmpg.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-333">
@@ -387,10 +366,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartTerminalApp/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartTerminalApp/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/smartTerminalApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="500">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>

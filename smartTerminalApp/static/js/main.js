@@ -24,5 +24,12 @@ $(function() {
                 }
             }, interval * 1000);
 
+        // Get the position of video div
+        var div = document.getElementById("videoDiv");
+
+        var offsetLeft = div.offsetLeft;
+        var offsetTop = div.offsetTop;
+        alert(offsetLeft);
+        alert(offsetTop);
 	});
 });

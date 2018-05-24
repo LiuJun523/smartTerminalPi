@@ -35,8 +35,6 @@
         // Wait until the video stream can play
         video.addEventListener('canplay', function (e) {
             if (!isStreaming) {
-                canvas.setAttribute('width', video.videoWidth);
-                canvas.setAttribute('height', video.videoHeight);
                 isStreaming = true;
             }
         }, false);
@@ -48,8 +46,6 @@
                 if (video.paused || video.ended) {
                     return;
                 }
-                var w = canvas.getAttribute('width');
-                var h = canvas.getAttribute('height');
                 ctx.fillRect(0, 0, 450, 300);
                 ctx.drawImage(video, 0, 0, 450, 300);
             }, 33);

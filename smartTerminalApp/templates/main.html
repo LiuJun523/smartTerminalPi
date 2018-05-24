@@ -12,7 +12,26 @@
 
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script async src="{% static 'js/cv.js' %}"></script>
+    <script src='{% static 'js/face-detection.js' %}'></script>
+    <script src='{% static 'js/signalling.js' %}'></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script  type='text/javascript'>
+        var Module = {
+            preRun: [],
+            postRun: [],
+            print: (function () {
+                return function (text) {
+                    text = Array.prototype.slice.call(arguments).join(' ');
+                    console.log(text);
+                };
+            })(),
+            printErr: function (text) {
+                text = Array.prototype.slice.call(arguments).join(' ');
+                console.error(text);
+            }
+        };
+    </script>
 </head>
 
 <body class="login-page">
@@ -34,7 +53,10 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div id="videoDiv" class="form-group">
-                                    <img for="form-elem-1" id="image" width="450" height="300" class="center-block" src="{% static 'img/left.jpg' %}"/>
+                                    <button id='start'>Start Streaming</button>
+                                    <video id='v'></video>
+                                    <canvas id='c'></canvas>
+                                    <button id='effect'>Toggle Face Detection</button>
                                 </div>
                             </div>
                         </div>

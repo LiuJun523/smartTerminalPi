@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 
-import os
 
 def index(request):
     context = {}
@@ -31,10 +30,5 @@ def main(request, params):
         interval = params.split(',')[1]
         context['patientID'] = patient_id
         context['interval'] = interval
-        call_video()
 
     return render(request, 'main.html', context)
-
-
-def call_video():
-    os.system("python3 /pistreaming/server.py")

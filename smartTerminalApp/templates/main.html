@@ -45,6 +45,19 @@
             }
         };
     </script>
+    <script>
+        // Let's get a default address for the signalling server
+        var address = document.getElementById('address').value;
+        if (!address || address === '') {
+            var hostname = location.hostname;
+            if (hostname) {
+                address = hostname + ':' + (location.port || (location.protocol === 'https:' ? 443 : 80)) + '/webrtc';
+                document.getElementById('address').value = address;
+            } else {
+                document.getElementById('address').value = "<host>:<port>/webrtc";
+            }
+        }
+    </script>
 </head>
 
 <body class="login-page">
@@ -66,6 +79,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div id="videoDiv" class="form-group">
+                                    <label id='server'>Web Service URL <input required type="text" id="address" value="" title="hostname (or IP address) and port of the UV4L WebRTC Web Service"/></label>
                                     <button id='start'>Start Streaming</button>
                                     <video id='v'></video>
                                     <canvas id='c'></canvas>

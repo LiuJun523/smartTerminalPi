@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e6f8c17-0706-4daa-9e77-594598244acc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pistreaming/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/.idea/pistreaming-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pistreaming/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTerminalApp/static/js/jsmpg.js" beforeDir="false" afterPath="$PROJECT_DIR$/pistreaming/jsmpg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTerminalApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartTerminalApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTerminalApp/templates/video.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +19,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/smartTerminalApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="585">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -43,15 +33,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartTerminalApp/templates/video.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -157,6 +138,35 @@
               <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
               <item name="pistreaming" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+              <item name="smartTerminalApp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+              <item name="smartTerminalApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+              <item name="smartTerminalApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smartTerminal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartTerminal" type="462c0819:PsiDirectoryNode" />
+              <item name="smartTerminalApp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -233,7 +243,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1438" height="791" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
@@ -383,8 +392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartTerminalApp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="585">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>

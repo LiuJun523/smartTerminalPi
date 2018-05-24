@@ -9,26 +9,11 @@
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-ico">
 	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
-    <style>
-        canvas { border:8px solid #fff;}
-        button {
-            border:none;
-            display:block;
-            padding:0.5em 1em;
-            margin:1% auto 0;
-            cursor:pointer;
-            color:#fff;
-            background-color:#9f361b;
-        }
-        button:active { background-color:#e44d26; }
-    </style>
 
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-    <script async src="{% static 'js/cv.js' %}"></script>
-    <script src='{% static 'js/face-detection.js' %}'></script>
-    <script src='{% static 'js/signalling.js' %}'></script>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src='{% static 'js/signalling.js' %}'></script>
     <script  type='text/javascript'>
         var Module = {
             preRun: [],
@@ -79,11 +64,9 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div id="videoDiv" class="form-group">
-                                    <label id='server'>Web Service URL <input required type="text" id="address" value="" title="hostname (or IP address) and port of the UV4L WebRTC Web Service"/></label>
-                                    <button id='start'>Start Streaming</button>
-                                    <video id='v'></video>
-                                    <canvas id='c'></canvas>
-                                    <button id='effect'>Toggle Face Detection</button>
+                                    <button id="start" type="button" class="btn btn-primary btn-block">Start Streaming</button>
+                                    <video class="hidden" id="video"></video>
+                                    <canvas class="canvas" id='canvas'></canvas>
                                 </div>
                             </div>
                         </div>

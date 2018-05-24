@@ -3,16 +3,12 @@
     window.addEventListener('DOMContentLoaded', function () {
         var isStreaming = false;
         var start = document.getElementById('start');
-        var video = document.getElementById('v');
-        var canvas = document.getElementById('c');
+        var video = document.getElementById('video');
+        var canvas = document.getElementById('canvas');
         var ctx = canvas.getContext('2d');
-        var effect = document.getElementById('effect');
-        var isEffectActive = false;
 
         start.addEventListener('click', function (e) {
-            var address = document.getElementById('address').value;
-            var protocol = location.protocol === "https:" ? "wss:" : "ws:";
-            var wsurl = protocol + '//' + address;
+            var wsurl = 'ws://localhost:80/webrtc';
 
             if (!isStreaming) {
                 signal(wsurl,
@@ -54,16 +50,9 @@
                 }
                 var w = canvas.getAttribute('width');
                 var h = canvas.getAttribute('height');
-                ctx.fillRect(0, 0, w, h);
-                ctx.drawImage(video, 0, 0, w, h);
-                if (isEffectActive) {
-                    detectFace(canvas);
-                }
+                ctx.fillRect(0, 0, 450, 300);
+                ctx.drawImage(video, 0, 0, 450, 300);
             }, 33);
-        }, false);
-
-        effect.addEventListener('click', function () {
-            isEffectActive = !isEffectActive;
         }, false);
     });
 })();

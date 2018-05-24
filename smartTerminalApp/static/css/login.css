@@ -65,6 +65,12 @@ body.login-page {
 	text-align: center;
 }
 
+.canvas {
+	border: 8px solid #fff;
+	width: 450px;
+	height: 250px;
+}
+
 @media screen and (max-width: 425px) {
 	.login-page .card-wrapper {
 		width: 90%;

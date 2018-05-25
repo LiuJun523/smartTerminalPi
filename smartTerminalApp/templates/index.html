@@ -43,6 +43,14 @@
 									</div>
 								</div>
 
+                                <div class="form-group-lg" id="timeDiv">
+									<div class="form-group">
+										<label for="time">Testing Time</label>
+										<input id="time" type="text" class="form-control" name="time" placeholder="minutes" required
+                                            onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+									</div>
+								</div>
+
 								<div class="form-group no-margin">
 									<button type="submit" class="btn btn-primary btn-block">Login</button>
 								</div>

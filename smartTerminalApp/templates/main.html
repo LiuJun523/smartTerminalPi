@@ -24,25 +24,38 @@
                     <img src="{% static 'img/logo.jpg' %}">
                 </div>
                 <div class="card fat">
-                    <h3 class="card-title text-center">Patient ID: {{ patientID }}, Interval Time: {{ interval }}(s)</h3>
-                    <input id="interval" type="text" class="hidden" name="interval" value={{ interval }}>
                     <form method="POST">
+                        <div class="card-title">
+                            <div style="display: table; width: 90%;">
+                                <div style="display: table-cell;">
+                                    <h2 class="text-left">Patient ID: {{ patientID }}, Interval Time: {{ interval }}(s)</h2>
+                                    <input id="interval" type="text" class="hidden" name="interval" value={{ interval }}>
+                                </div>
+                                <div style="display: table-cell; text-align: right;">
+                                    <div id="remainSeconds" class="hidden">{{ time }}</div>
+                                    <div id="remainTime">
+                                        <h2 class="text-left text-danger">Testing Time: {{ show_time }}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <img for="form-elem-1" id="image" width="450" height="300" class="center-block" src="{% static 'img/left.jpg' %}"/>
+                                    <img for="form-elem-1" id="image" width="450px" height="300px" class="center-block" src="{% static 'img/left.jpg' %}"/>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div id="videoDiv" class="form-group">
-                                    <button id="start" type="button" class="btn btn-primary btn-block">Start Streaming</button>
                                     <video class="hidden" id="video"></video>
                                     <canvas class="canvas" id='canvas'></canvas>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group no-margin">
-                            <button id="btn_start" type="button" class="btn btn-primary btn-block">Start</button>
+                            <p align="center">
+                                <button id="btn_start" type="button" class="btn btn-primary btn-lg">Start</button>
+                            </p>
                         </div>
                         {% csrf_token %}
                     </form>

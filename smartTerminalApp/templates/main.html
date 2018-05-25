@@ -28,14 +28,14 @@
                         <div class="card-title">
                             <div style="display: table; width: 90%;">
                                 <div style="display: table-cell;">
-                                    <h2 class="text-left">Patient ID: {{ patientID }}, Interval Time: {{ interval }}(s)</h2>
+                                    <h3 class="text-left">Patient ID: {{ patientID }}, Interval Time: {{ interval }}(s)</h3>
                                     <input id="patientID" type="text" class="hidden" name="patientID" value={{ patientID }}>
                                     <input id="interval" type="text" class="hidden" name="interval" value={{ interval }}>
                                 </div>
                                 <div style="display: table-cell; text-align: right;">
-                                    <input id="remainSeconds" type="text" class="hidden" name="remainSeconds" value={{ time }}>
+                                    <input id="remainSeconds" type="text" class="hidden" name="remainSeconds" value={{ remainSeconds }}>
                                     <div id="remainTime">
-                                        <h2 class="text-left text-danger">Testing Time: {{ show_time }}</h2>
+                                        <h3 class="text-left text-danger">Testing Time: {{ showTime }}</h3>
                                     </div>
                                 </div>
                             </div>

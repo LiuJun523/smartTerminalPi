@@ -50,6 +50,7 @@
 
 $(function() {
     // Start a screen
+    var patientID = $("#patientID").val();
     var odiv = document.getElementById('videoDiv');
     document.getElementById("btn_start").disabled = true;
     $.ajax({
@@ -59,6 +60,7 @@ $(function() {
         data: {
             'hitcount_pk': '1',
             'csrfmiddlewaretoken': getCookie('csrftoken'),
+            'patientID': patientID,
             'type': 'check',
             'left': odiv.getBoundingClientRect().left,
             'top': odiv.getBoundingClientRect().top
@@ -98,7 +100,7 @@ $(function() {
                 // Changing image according interval time
                 var t = 0;
                 var interval = $("#interval").val();
-                var time = parseInt($("#remainSeconds").val()) * 60;
+                var remainSeconds = parseInt($("#remainSeconds").val()) * 60;
                 var startTime = new Date().getTime();
                 var intervalFuc = setInterval(function() {
                     switch (t%2){
@@ -114,7 +116,7 @@ $(function() {
                         }
                     }
 
-                    if(new Date().getTime() - startTime >= time * 1000) {
+                    if(new Date().getTime() - startTime >= remainSeconds * 1000) {
                         clearInterval(intervalFuc);
 
                         // Split video and upload images
@@ -155,7 +157,7 @@ $(function() {
             var second = padLeft(Math.floor(SysSecond % 60), 2);
             var minite = padLeft(Math.floor((SysSecond / 60) % 60), 2);
 
-            $("#remainTime").html('<h2 class="text-left text-danger">Testing Time: ' + minite + ':' + second + '</h2>');
+            $("#remainTime").html('<h3 class="text-left text-danger">Testing Time: ' + minite + ':' + second + '</h3>');
         } else {
             window.clearInterval(InterValObj);
             // Upload

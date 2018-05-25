@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-import time, picamera
+import time
 import cv2
 
 
@@ -10,15 +10,15 @@ def index(request):
         template_name = 'index.html'
 
     if request.method == 'POST':
-        patient_id = request.POST.get('patientID')
+        patientID = request.POST.get('patientID')
         interval = request.POST.get('interval')
-        time = request.POST.get('time')
+        remainSeconds = request.POST.get('remainSeconds')
 
-        patient_id = patient_id.strip()
-        if patient_id == 'P1':
-            request.session['patientID'] = patient_id
+        patientID = patientID.strip()
+        if patientID == 'P1':
+            request.session['patientID'] = patientID
             request.session['interval'] = interval
-            request.session['time'] = time
+            request.session['remainSeconds'] = remainSeconds
             return redirect('main')
         else:
             context['message'] = 'Patient ID does not exist!'
@@ -30,27 +30,25 @@ def index(request):
 def main(request):
     context = {}
     if request.method == 'GET':
-        patient_id = request.session.get('patientID', None)
+        patientID = request.session.get('patientID', None)
         interval = request.session.get('interval', None)
-        time = request.session.get('time', None)
-        context['patientID'] = patient_id
+        remainSeconds = request.session.get('remainSeconds', None)
+        context['patientID'] = patientID
         context['interval'] = interval
-        context['time'] = time
-        if len(time) < 2:
-            show_time = '0' + time
+        context['remainSeconds'] = remainSeconds
+        if len(remainSeconds) < 2:
+            showTime = '0' + remainSeconds
         else:
-            show_time = time
-        context['show_time'] = show_time + ':00'
+            showTime = remainSeconds
+        context['showTime'] = showTime + ':00'
 
         return render(request, 'main.html', context)
 
     if request.method == 'POST':
-
+        patientid = request.POST.get('patientID')
         if request.POST.get('type') == 'check':
             left = request.POST.get('left')
             top = request.POST.get('top')
-            file = open('')
+            filename = patientid + '_' + str(int(time.time())) + '.h264'
 
-
-
-        return HttpResponse()
+            return HttpResponse(filename)

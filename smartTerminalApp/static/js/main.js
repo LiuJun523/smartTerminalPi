@@ -44,8 +44,39 @@
                 }
                 ctx.fillRect(0, 0, 450, 300);
                 ctx.drawImage(video, 0, 0, 450, 300);
+                saveImageAs(canvas, "snap.jpg", "jpeg");
             }, 33);
         }, false);
+
+        function saveImageAs(canvas, filename, type, quality){
+            var anchorElement, event, blob;
+            type = type ? "png" : type;
+
+            // for IE >= 10
+            if(canvas.msToBlob !== undefined && navigator.msSaveBlob !== undefined){
+               blob = canvas.msToBlob();
+               navigator.msSaveBlob(blob, filename + "." + type);
+               return;
+            }
+            anchorElement = document.createElement('a');    // Create a download link
+            if(type.toLowerCase() === "jpg" || type.toLowerCase() === "jpeg"){
+                quality = quality ? quality : 0.9;
+                anchorElement.href = canvas.toDataURL("image/jpeg",quality);         // attach the image data URL
+            }else{
+                anchorElement.href = canvas.toDataURL();         // attach the image data URL
+            }
+            // check for download attribute
+            if ( anchorElement.download !== undefined ) {
+                anchorElement.download = filename + "." + type; // set the download filename
+                if (typeof MouseEvent === "function") {     // does the browser support the object MouseEvent
+                    event = new MouseEvent( "click", {view  : window, bubbles: true,cancelable : true} );
+                    anchorElement.dispatchEvent(event); // simulate a click on the download link.
+                } else
+                if (anchorElement.fireEvent) {          // if no MouseEvent object try fireEvent
+                    anchorElement.fireEvent("onclick");
+                }
+            }
+        }
     });
 })();
 

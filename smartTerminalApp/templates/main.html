@@ -24,15 +24,16 @@
                     <img src="{% static 'img/logo.jpg' %}">
                 </div>
                 <div class="card fat">
-                    <form method="POST">
+                    <form method="POST">{% csrf_token %}
                         <div class="card-title">
                             <div style="display: table; width: 90%;">
                                 <div style="display: table-cell;">
                                     <h2 class="text-left">Patient ID: {{ patientID }}, Interval Time: {{ interval }}(s)</h2>
+                                    <input id="patientID" type="text" class="hidden" name="patientID" value={{ patientID }}>
                                     <input id="interval" type="text" class="hidden" name="interval" value={{ interval }}>
                                 </div>
                                 <div style="display: table-cell; text-align: right;">
-                                    <div id="remainSeconds" class="hidden">{{ time }}</div>
+                                    <input id="remainSeconds" type="text" class="hidden" name="remainSeconds" value={{ time }}>
                                     <div id="remainTime">
                                         <h2 class="text-left text-danger">Testing Time: {{ show_time }}</h2>
                                     </div>
@@ -57,7 +58,6 @@
                                 <button id="btn_start" type="button" class="btn btn-primary btn-lg">Start</button>
                             </p>
                         </div>
-                        {% csrf_token %}
                     </form>
                 </div>
                 <div class="footer">

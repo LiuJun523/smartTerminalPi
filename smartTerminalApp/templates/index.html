@@ -22,7 +22,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h3 class="card-title">Login</h3>
-							<form method="POST">
+							<form method="POST">{% csrf_token %}
 								<div class="form-group-lg" id="patientIDDiv">
 									<div class="form-group">
 										<label for="patientID">Patient ID</label>
@@ -52,9 +52,8 @@
 								</div>
 
 								<div class="form-group no-margin">
-									<button type="submit" class="btn btn-primary btn-block">Login</button>
+									<button id="btn_login" type="submit" class="btn btn-primary btn-block">Login</button>
 								</div>
-                                {% csrf_token %}
 							</form>
 						</div>
 					</div>

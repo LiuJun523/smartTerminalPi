@@ -20,5 +20,5 @@ from smartTerminalApp.views import index, main
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', index, name="index"),
-    path('main/(?P<params>\d+)/$', main, name="main"),
+    path('main/', main, name="main"),
 ]

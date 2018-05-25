@@ -49,6 +49,28 @@
 })();
 
 $(function() {
+    // Start a screen
+    var odiv = document.getElementById('videoDiv');
+    document.getElementById("btn_start").disabled = true;
+    $.ajax({
+        url: "/main/",
+        type: "post",
+        async: false,
+        data: {
+            'hitcount_pk': '1',
+            'csrfmiddlewaretoken': getCookie('csrftoken'),
+            'type': 'check',
+            'left': odiv.getBoundingClientRect().left,
+            'top': odiv.getBoundingClientRect().top
+        },
+        success: function(status){
+        }
+    });
+
+    $("#btn_check").click(function() {
+
+    });
+
     $("#btn_start").click(function() {
         // Validate the position is OK
         var valpos = false;

@@ -3,6 +3,7 @@ import os
 import sys
 
 if __name__ == "__main__":
+    os.system('sudo service uv4l_raspicam restart')
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "smartTerminal.settings")
     try:
         from django.core.management import execute_from_command_line

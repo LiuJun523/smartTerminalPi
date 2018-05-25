@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
-import json
+import time, picamera
+import cv2
 
 
 def index(request):
@@ -44,4 +45,12 @@ def main(request):
         return render(request, 'main.html', context)
 
     if request.method == 'POST':
-        return HttpResponse('success')
+
+        if request.POST.get('type') == 'check':
+            left = request.POST.get('left')
+            top = request.POST.get('top')
+            file = open('')
+
+
+
+        return HttpResponse()

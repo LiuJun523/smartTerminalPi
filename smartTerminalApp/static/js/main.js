@@ -252,12 +252,13 @@ $(function() {
 
 (function ($) {
     window.Ewin = function () {
-        var html = '<div id="[Id]" class="modal fade" role="dialog" aria-labelledby="modalLabel">' +
-                              '<div class="modal-dialog modal-sm">' +
+        var html = '<div id="[Id]" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">' +
+                              '<div class="modal-dialog">' +
                                   '<div class="modal-content">' +
                                       '<div class="modal-header">' +
-                                          '<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' +
-                                          '<h4 class="modal-title" id="modalLabel">[Title]</h4>' +
+                                          '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">' +
+					  '&times;</button>' +
+                                          '<h6 class="modal-title" id="modalLabel">[Title]</h6>' +
                                       '</div>' +
                                       '<div class="modal-body">' +
                                       '<p>[Message]</p>' +
@@ -270,25 +271,12 @@ $(function() {
                               '</div>' +
                           '</div>';
 
-
-        var dialogdHtml = '<div id="[Id]" class="modal fade" role="dialog" aria-labelledby="modalLabel">' +
-                              '<div class="modal-dialog">' +
-                                  '<div class="modal-content">' +
-                                      '<div class="modal-header">' +
-                                          '<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' +
-                                          '<h4 class="modal-title" id="modalLabel">[Title]</h4>' +
-                                      '</div>' +
-                                      '<div class="modal-body">' +
-                                      '</div>' +
-                                  '</div>' +
-                              '</div>' +
-                          '</div>';
         var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm');
         var generateId = function () {
             var date = new Date();
             return 'mdl' + date.valueOf();
         }
-        var init = function (options) {
+        var init = function(options) {
             options = $.extend({}, {
                 title: "Message",
                 message: "Title",
@@ -367,37 +355,6 @@ $(function() {
                         }
                     }
                 };
-            },
-            dialog: function (options) {
-                options = $.extend({}, {
-                    title: 'title',
-                    url: '',
-                    width: 800,
-                    height: 550,
-                    onReady: function () { },
-                    onShown: function (e) { }
-                }, options || {});
-                var modalId = generateId();
-
-                var content = dialogdHtml.replace(reg, function (node, key) {
-                    return {
-                        Id: modalId,
-                        Title: options.title
-                    }[key];
-                });
-                $('body').append(content);
-                var target = $('#' + modalId);
-                target.find('.modal-body').load(options.url);
-                if (options.onReady())
-                    options.onReady.call(target);
-                target.modal();
-                target.on('shown.bs.modal', function (e) {
-                    if (options.onReady(e))
-                        options.onReady.call(target, e);
-                });
-                target.on('hide.bs.modal', function (e) {
-                    $('body').find(target).remove();
-                });
             }
         }
     }();

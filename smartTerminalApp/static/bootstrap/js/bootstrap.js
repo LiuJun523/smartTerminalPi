@@ -1163,6 +1163,10 @@ if (typeof jQuery === 'undefined') {
       paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
       paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
     })
+
+    // Dialog move left
+    var $modal_dialog = $(this.$element[0]).find('.modal-dialog');
+    $modal_dialog.css({'margin-left': '200px'});
   }
 
   Modal.prototype.resetAdjustments = function () {

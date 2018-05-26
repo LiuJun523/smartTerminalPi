@@ -26,7 +26,7 @@
 								<div class="form-group-lg" id="patientIDDiv">
 									<div class="form-group">
 										<label for="patientID">Patient ID</label>
-										<input id="patientID" type="text" class="form-control" name="patientID" value="" required autofocus>
+										<input id="patientID" type="text" class="form-control" name="patientID" value="P1" required autofocus>
 									</div>
                                     {% if message %}
                                         <div class="text-center text-danger">
@@ -38,7 +38,7 @@
 								<div class="form-group-lg" id="intervalDiv">
 									<div class="form-group">
 										<label for="interval">Interval Time</label>
-										<input id="interval" type="text" class="form-control" name="interval" placeholder="seconds" required
+										<input id="interval" type="text" class="form-control" name="interval" placeholder="seconds" value="2" required
                                             onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
 									</div>
 								</div>
@@ -46,7 +46,7 @@
                                 <div class="form-group-lg" id="timeDiv">
 									<div class="form-group">
 										<label for="remainSeconds">Testing Time</label>
-										<input id="remainSeconds" type="text" class="form-control" name="remainSeconds" placeholder="minutes" required
+										<input id="remainSeconds" type="text" class="form-control" name="remainSeconds" placeholder="minutes" value="1" required
                                             onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
 									</div>
 								</div>
